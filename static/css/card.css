@@ -1,0 +1,9 @@
+#row :nth-child(2n + 1){
+    background: linear-gradient(to bottom, #AEF4D3, #CAF9E2);
+    /* border-color: #059669; */
+}
+
+#row :nth-child(2n + 2) {
+    background: linear-gradient(to bottom, #FBD2EA, #FCE4F2);
+    /* border-color: #EC4899; */
+  }

@@ -1,0 +1,3 @@
+SELECT DISTINCT prescriptions.id AS prescriptions_id, prescriptions.dr_name AS prescriptions_dr_name, prescriptions.dr_num AS prescriptions_dr_num, prescriptions.prescription_date AS prescriptions_prescription_date, prescriptions.drugs AS prescriptions_drugs, prescriptions.u_id AS prescriptions_u_id 
+FROM prescriptions 
+WHERE prescriptions.u_id = %s GROUP BY prescriptions.dr_name
