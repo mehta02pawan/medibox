@@ -36,7 +36,6 @@ dateparser==1.1.1
 decorator==5.1.1
 dnspython==1.16.0
 docopt==0.6.2
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.3.0/en_core_web_sm-3.3.0-py3-none-any.whl
 eventlet==0.33.1
 fastrlock==0.8
 fbmessenger==6.0.0
@@ -74,7 +73,7 @@ jmespath==1.0.0
 joblib==1.0.1
 jsonpickle==2.0.0
 jsonschema==3.2.0
-kafka-python==2.0.2
+kafka-python==2.0.2g
 keras
 Keras-Preprocessing
 kiwisolver==1.4.2
@@ -162,9 +161,6 @@ SQLAlchemy==1.4.36
 srsly==2.4.3
 tabulate==0.8.9
 tarsafe==0.0.3
-tensorboard
-tensorboard-data-server
-tensorboard-plugin-wit
 tensorflow-cpu==2.8.0
 tensorflow-addons
 tensorflow-estimator
