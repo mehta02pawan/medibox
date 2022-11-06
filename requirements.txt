@@ -167,7 +167,7 @@ tarsafe==0.0.3
 tensorboard
 tensorboard-data-server
 tensorboard-plugin-wit
-tensorflow-cpu
+tensorflow-cpu==2.7.3
 tensorflow-addons
 tensorflow-estimator
 tensorflow-hub
