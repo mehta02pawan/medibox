@@ -39,6 +39,7 @@ import geocoder
 import chat
 import json
 from flask_socketio import SocketIO
+import logging
 
 # app.config['MYSQL_HOST'] = '127.0.0.1'
 # app.config['MYSQL_USER'] = 'root'
@@ -510,3 +511,5 @@ def scheduler():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)
