@@ -1,4 +1,4 @@
-﻿absl-py==0.13.0
+absl-py==0.13.0
 aio-pika==6.8.2
 aiofiles==0.8.0
 aiohttp==3.7.4
@@ -83,7 +83,6 @@ libclang==14.0.1
 locket==1.0.0
 Markdown==3.3.7
 MarkupSafe==2.1.1
-matplotlib
 mattermostwrapper==2.2
 msgpack==1.0.4
 multidict==5.2.0
@@ -177,8 +176,6 @@ tf-estimator-nightly==2.8.0.dev2021122109
 thinc
 threadpoolctl==3.1.0
 toolz==0.11.2
-tqdm==4.64.0
-twilio==6.50.1
 typeguard==2.13.3
 typer==0.3.2
 typing-extensions==3.10.0.2
