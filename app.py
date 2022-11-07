@@ -1,14 +1,13 @@
 # from flask_mysqldb import MySQL
 from datetime import datetime
 from fileinput import filename
-import rasa
 import create_event
 from collections import Counter
 from flask import Flask, render_template, request, send_file, redirect, url_for, session, flash, jsonify
 from json import dump
 import requests
 from isodate import parse_duration
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 # import flask_mysqldb
 from pickle import GET
 from flask_sqlalchemy import SQLAlchemy
