@@ -161,7 +161,7 @@ tabulate==0.8.9
 tarsafe==0.0.3
 termcolor==1.1.0
 terminaltables==3.1.10
-tensorflow
+tensorflow==2.8.0
 tensorflow-addons
 tensorflow-estimator
 tensorflow-hub
