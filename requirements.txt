@@ -161,6 +161,11 @@ tabulate==0.8.9
 tarsafe==0.0.3
 termcolor==1.1.0
 terminaltables==3.1.10
+tensorflow
+tensorflow-addons
+tensorflow-estimator
+tensorflow-hub
+tensorflow-io-gcs-filesystem
 tf-estimator-nightly==2.8.0.dev2021122109
 thinc
 threadpoolctl==3.1.0
