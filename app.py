@@ -1,4 +1,3 @@
-# from flask_mysqldb import MySQL
 from datetime import datetime
 from fileinput import filename
 import create_event
@@ -7,8 +6,6 @@ from flask import Flask, render_template, request, send_file, redirect, url_for,
 from json import dump
 import requests
 from isodate import parse_duration
-# import matplotlib.pyplot as plt
-# import flask_mysqldb
 from pickle import GET
 from flask_sqlalchemy import SQLAlchemy
 from pyparsing import autoname_elements
@@ -25,7 +22,6 @@ from dateparser import parser
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 import sqlalchemy as db
 from sqlalchemy import exists
-# from sqlalchemy.testing.suite.test_reflection import users
 from sqlalchemy.orm import sessionmaker
 import models
 from models import Prescriptions, Users, Uploads, Drugdata, bmi
@@ -40,13 +36,6 @@ import json
 from flask_socketio import SocketIO
 import logging
 
-# app.config['MYSQL_HOST'] = '127.0.0.1'
-# app.config['MYSQL_USER'] = 'root'
-# app.config['MYSQL_PASSWORD'] = ''
-# app.config['MYSQL_DB'] = 'trial'
-#
-# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-# mysql = flask_mysqldb.MySQL(app)
 socketio = SocketIO(app)
 
 connection = engine.connect()
@@ -58,6 +47,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+# change the path as per your directory of pytesseract
 pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe"
 
 
@@ -93,7 +83,7 @@ def registration():
             usr = Users(name, mobile, email, password, birthday, weight, height)
             db.session.add(usr)
             db.session.commit()
-            # session['id'] = id
+         
 
             flash('Registered Successfully!', 'info')
             return redirect(url_for('home'))
@@ -110,15 +100,7 @@ def login():
             found_user = Users.query.filter_by(email=username, password=pass1).first()
             if found_user:
                 login_user(user)
-                # session.delete(user)
                 session.permanent = False
-                # local_object = db.session.merge(current_user)
-                # db.session.add(local_object)
-                # db.session.commit()
-                # db.session.add(current_user)
-                #
-                # db.session.commit()
-
                 return redirect(url_for('home'))
             else:
                 flash("Wrong Password", "danger")
@@ -136,7 +118,6 @@ def logout():
     # session.clear()
     logout_user()
     flash("See you again!")
-    # Session.pop('health1234', None)
     return redirect(url_for('login'))
 
 
@@ -438,7 +419,7 @@ def maps():
                    }
 
     headers = {
-        "X-RapidAPI-Key": "e182587402msh8fb9cb7826edf43p1eda64jsnb099563a5477",
+        "X-RapidAPI-Key": "YOUR_API_KEY",
         "X-RapidAPI-Host": "google-maps28.p.rapidapi.com"
     }
 
@@ -468,7 +449,7 @@ def videos():
     search_url = 'https://www.googleapis.com/youtube/v3/search'
     videos_url = 'https://www.googleapis.com/youtube/v3/videos'
     params = {
-        'key': 'AIzaSyChdx2e082EBpKVzC_NudAI9z6tpakgjSA',
+        'key': 'YOUR_API_KEY',
         'q': 'workout for' + data + 'people',
         'part': 'snippet',
         'maxResults': 6,
@@ -483,7 +464,7 @@ def videos():
         video_ids.append(result['id']['videoId'])
 
     video_params = {
-        'key': 'AIzaSyChdx2e082EBpKVzC_NudAI9z6tpakgjSA',
+        'key': 'YOUR_API_KEY',
         'id': ','.join(video_ids),
         'part': 'snippet,contentDetails',
         'maxResults': 6
