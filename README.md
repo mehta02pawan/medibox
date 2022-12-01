@@ -2,6 +2,11 @@
 ## An  Integrated Web Application for Personalised Medical Assistance
 > This is a Flask Application. To run this application you must have python installed on your system.
 > To install and run flask application have a look at [flask's](https://github.com/pallets/flask) official documentation
+>  * After installing flask Run ```pip install -r requirements.txt``` to install all the required packages.
+>  * Create 'health' database into your server.
+>  * Replace "YOUR_API_KEY" in "app.py" file with your google API key.
+>  * Replace "credentials.json" file with your credentials file which can be downloaded from google developers console. 
+>  * Finally run ```Python app.py``` and app should be up and running if everything goes right.  
 ### Introduction
 ###### Health is a crucial facet of everybody's life. We all have to take medicine prescribed by doctors from time to time to sustain the soundness of our bodies. It is coherently laborious to maintain track of all the medications throughout life. Dissimilarity exists among individuals and medical institutions for treating patients with diverse medicines. Specific drugs might treat a patient positively while they might not turn out to be that effective on others. Hence, understanding each patient's body and the side effects of the drugs on them is crucial for doctors. The work of the doctors can be eased if they can refer to the patient's medical records. On the contrary, it is a tedious and meticulous job for the patients to maintain their own drug history. The proposed model Medibox will become a bridge for the doctors and the patient's smooth communication. The users can easily upload their prescriptions that will be converted into a digital repository along with more features. Overall, Medibox is a one-spot solution for patients to start pursuing a wholesome life and to keep a record of their medical history effortlessly.
 ### Current Senario 
